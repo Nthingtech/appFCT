@@ -32,7 +32,7 @@ public class MainController implements Initializable {
 
     @FXML
     public void  onMenuItemPersonalAction() {
-        System.out.println("onMenuItemPersonalAction");
+        loadView("PersonalList.fxml");
     }
 
     @FXML
