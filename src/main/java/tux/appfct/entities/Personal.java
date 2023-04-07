@@ -1,20 +1,25 @@
 package tux.appfct.entities;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Objects;
 
-public class Personal implements Serializable {
+public class Personal extends Person implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer id;
-    private String name;
 
-    public Personal() {
+    private String cref;
+
+    public Personal(Integer id, String cref) {
+        this.id = id;
+        this.cref = cref;
     }
 
-    public Personal(Integer id, String name) {
+    public Personal(String name, Instant birthday, Character genre, String address, String person, Integer id, String cref) {
+        super(name, birthday, genre, address, person);
         this.id = id;
-        this.name = name;
+        this.cref = cref;
     }
 
     public Integer getId() {
@@ -25,32 +30,33 @@ public class Personal implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCref() {
+        return cref;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCref(String cref) {
+        this.cref = cref;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Personal personal = (Personal) o;
-        return Objects.equals(id, personal.id);
+        return Objects.equals(id, personal.id) && Objects.equals(cref, personal.cref);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(super.hashCode(), id, cref);
     }
 
     @Override
     public String toString() {
         return "Personal{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", cref='" + cref + '\'' +
                 '}';
     }
 }

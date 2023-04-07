@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import tux.appfct.entities.Personal;
 
 import java.net.URL;
+import java.time.Instant;
 import java.util.ResourceBundle;
 
 public class PersonalListController implements Initializable {
@@ -22,6 +23,22 @@ public class PersonalListController implements Initializable {
 
     @FXML
     private TableColumn<Personal, String> tableColumnName;
+
+    @FXML
+    private TableColumn<Personal, Instant> tableColumnBirthday;
+
+    @FXML
+    private TableColumn<Personal, Character> tableColumnGenre;
+
+    @FXML
+    private TableColumn<Personal, String> tableColumnAddress;
+
+    @FXML
+    private TableColumn<Personal, String> tableColumnPerson;
+
+    @FXML
+    private TableColumn<Personal, String> tableColumnCref;
+
 
     @FXML
     private Button btNew;
@@ -39,8 +56,13 @@ public class PersonalListController implements Initializable {
     private void initializeNodes() {
         tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
         tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tableColumnBirthday.setCellValueFactory(new PropertyValueFactory<>("birthday"));
+        tableColumnGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        tableColumnAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        tableColumnPerson.setCellValueFactory(new PropertyValueFactory<>("person"));
+        tableColumnCref.setCellValueFactory(new PropertyValueFactory<>("cref"));
 
         Stage stage = (Stage) MainApplication.getMainScene().getWindow();
         tableViewPersonal.prefHeightProperty().bind(stage.heightProperty());
-    }
+    } 
 }

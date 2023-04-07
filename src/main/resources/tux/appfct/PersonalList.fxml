@@ -28,6 +28,11 @@
         <columns>
           <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="Código" />
           <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="tableColumnBirthday" prefWidth="75.0" text="Data de nascimento" />
+            <TableColumn fx:id="tableColumnGenre" prefWidth="75.0" text="Gênero" />
+            <TableColumn fx:id="tableColumnAddress" prefWidth="75.0" text="Endereço" />
+            <TableColumn fx:id="tableColumnPerson" prefWidth="75.0" text="P. Física ou Jurídica" />
+            <TableColumn fx:id="tableColumnCref" prefWidth="75.0" text="Cref" />
         </columns>
       </TableView>
    </children>
