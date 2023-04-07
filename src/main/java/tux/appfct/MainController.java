@@ -23,6 +23,9 @@ public class MainController implements Initializable {
     private MenuItem menuItemPersonal;
 
     @FXML
+    private MenuItem menuItemTraining;
+
+    @FXML
     private MenuItem menuSobre;
 
     @FXML
@@ -33,6 +36,11 @@ public class MainController implements Initializable {
     @FXML
     public void  onMenuItemPersonalAction() {
         loadView("PersonalList.fxml");
+    }
+
+    @FXML
+    public void  onMenuItemPrescriptionAction() {
+        System.out.println("onMenuItemPrescriptionAction");
     }
 
     @FXML
