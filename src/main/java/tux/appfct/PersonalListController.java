@@ -57,7 +57,7 @@ public class PersonalListController implements Initializable {
         tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
         tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
         tableColumnBirthday.setCellValueFactory(new PropertyValueFactory<>("birthday"));
-        tableColumnGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        tableColumnGenre.setCellValueFactory(new PropertyValueFactory<>("gender"));
         tableColumnAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         tableColumnPerson.setCellValueFactory(new PropertyValueFactory<>("person"));
         tableColumnCref.setCellValueFactory(new PropertyValueFactory<>("cref"));

@@ -33,16 +33,14 @@ public class MainController implements Initializable {
 
     @FXML
     private void closeButtonAction(){
-        // get a handle to the stage
         //botão para fechar programa
         Stage stage = (Stage) closeButton.getScene().getWindow();
-        // do what you have to do
         stage.close();
     }
 
     @FXML
     public void  onMenuItemClientAction() {
-        System.out.println("onMenuItemClientAction");
+        loadView("ClientList.fxml");
     }
 
     @FXML

@@ -48,7 +48,7 @@ public abstract class Person implements Serializable {
         return gender;
     }
 
-    public void setGender(Character genre) {
+    public void setGender(Character gender) {
         this.gender = gender;
     }
 
