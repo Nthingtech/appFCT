@@ -11,7 +11,7 @@ public abstract class Person implements Serializable {
 
     private Instant birthday;
 
-    private Character genre;
+    private Character gender;
 
     private String address;
 
@@ -20,10 +20,10 @@ public abstract class Person implements Serializable {
     public Person() {
     }
 
-    public Person(String name, Instant birthday, Character genre, String address, String person) {
+    public Person(String name, Instant birthday, Character gender, String address, String person) {
         this.name = name;
         this.birthday = birthday;
-        this.genre = genre;
+        this.gender = gender;
         this.address = address;
         this.person = person;
     }
@@ -45,14 +45,15 @@ public abstract class Person implements Serializable {
     }
 
     public Character getGenre() {
-        return genre;
+        return gender;
     }
 
-    public void setGenre(Character genre) {
-        this.genre = genre;
+    public void setGender(Character genre) {
+        this.gender = gender;
     }
 
     public String getAddress() {
+
         return address;
     }
 
@@ -61,6 +62,7 @@ public abstract class Person implements Serializable {
     }
 
     public String getPerson() {
+
         return person;
     }
 
@@ -73,12 +75,12 @@ public abstract class Person implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person1 = (Person) o;
-        return Objects.equals(name, person1.name) && Objects.equals(birthday, person1.birthday) && Objects.equals(genre, person1.genre) && Objects.equals(address, person1.address) && Objects.equals(person, person1.person);
+        return Objects.equals(name, person1.name) && Objects.equals(birthday, person1.birthday) && Objects.equals(gender, person1.gender) && Objects.equals(address, person1.address) && Objects.equals(person, person1.person);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, birthday, genre, address, person);
+        return Objects.hash(name, birthday, gender, address, person);
     }
 
     @Override
@@ -86,7 +88,7 @@ public abstract class Person implements Serializable {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", birthday=" + birthday +
-                ", genre=" + genre +
+                ", gender=" + gender +
                 ", address='" + address + '\'' +
                 ", person='" + person + '\'' +
                 '}';

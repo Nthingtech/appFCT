@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,6 +28,17 @@ public class MainController implements Initializable {
 
     @FXML
     private MenuItem menuSobre;
+
+    @FXML private javafx.scene.control.Button closeButton;
+
+    @FXML
+    private void closeButtonAction(){
+        // get a handle to the stage
+        //botão para fechar programa
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        // do what you have to do
+        stage.close();
+    }
 
     @FXML
     public void  onMenuItemClientAction() {
