@@ -28,7 +28,7 @@ public class PersonalListController implements Initializable {
     private TableColumn<Personal, Instant> tableColumnBirthday;
 
     @FXML
-    private TableColumn<Personal, Character> tableColumnGenre;
+    private TableColumn<Personal, Character> tableColumnGender;
 
     @FXML
     private TableColumn<Personal, String> tableColumnAddress;
@@ -57,7 +57,7 @@ public class PersonalListController implements Initializable {
         tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
         tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
         tableColumnBirthday.setCellValueFactory(new PropertyValueFactory<>("birthday"));
-        tableColumnGenre.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        tableColumnGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         tableColumnAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         tableColumnPerson.setCellValueFactory(new PropertyValueFactory<>("person"));
         tableColumnCref.setCellValueFactory(new PropertyValueFactory<>("cref"));
