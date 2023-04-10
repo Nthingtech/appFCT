@@ -9,8 +9,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
+<<<<<<< HEAD
 import tux.appfct.Alerts;
 import tux.appfct.MainApplication;
+=======
+import javafx.stage.Stage;
+>>>>>>> 31984e146fd54673d261e98cfd75a86e61251e62
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,9 +34,18 @@ public class MainController implements Initializable {
     @FXML
     private MenuItem menuSobre;
 
+    @FXML private javafx.scene.control.Button closeButton;
+
+    @FXML
+    private void closeButtonAction(){
+        //botão para fechar programa
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
+
     @FXML
     public void  onMenuItemClientAction() {
-        System.out.println("onMenuItemClientAction");
+        loadView("ClientList.fxml");
     }
 
     @FXML

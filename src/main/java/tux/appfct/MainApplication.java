@@ -11,6 +11,7 @@ import java.io.IOException;
 public class MainApplication extends Application {
 
     private static  Scene mainScene;
+
    @Override
    public synchronized void start(Stage primaryStage) {
        try {

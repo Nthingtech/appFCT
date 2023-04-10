@@ -7,38 +7,34 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import tux.appfct.MainApplication;
-import tux.appfct.entities.Personal;
+import tux.appfct.entities.Person;
 
 import java.net.URL;
 import java.time.Instant;
 import java.util.ResourceBundle;
 
-public class PersonalListController implements Initializable {
+public class ClientListController implements Initializable {
 
     @FXML
-    private TableView<Personal> tableViewPersonal;
+    private TableView<Person> tableViewPerson;
 
     @FXML
-    private TableColumn<Personal, Integer> tableColumnId;
+    private TableColumn<Person, Integer> tableColumnId;
 
     @FXML
-    private TableColumn<Personal, String> tableColumnName;
+    private TableColumn<Person, String> tableColumnName;
 
     @FXML
-    private TableColumn<Personal, Instant> tableColumnBirthday;
+    private TableColumn<Person, Instant> tableColumnBirthday;
 
     @FXML
-    private TableColumn<Personal, Character> tableColumnGender;
+    private TableColumn<Person, Character> tableColumnGender;
 
     @FXML
-    private TableColumn<Personal, String> tableColumnAddress;
+    private TableColumn<Person, String> tableColumnAddress;
 
     @FXML
-    private TableColumn<Personal, String> tableColumnPerson;
-
-    @FXML
-    private TableColumn<Personal, String> tableColumnCref;
+    private TableColumn<Person, String> tableColumnPerson;
 
 
     @FXML
@@ -61,9 +57,8 @@ public class PersonalListController implements Initializable {
         tableColumnGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         tableColumnAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         tableColumnPerson.setCellValueFactory(new PropertyValueFactory<>("person"));
-        tableColumnCref.setCellValueFactory(new PropertyValueFactory<>("cref"));
 
         Stage stage = (Stage) MainApplication.getMainScene().getWindow();
-        tableViewPersonal.prefHeightProperty().bind(stage.heightProperty());
-    } 
+        tableViewPerson.prefHeightProperty().bind(stage.heightProperty());
+    }
 }
