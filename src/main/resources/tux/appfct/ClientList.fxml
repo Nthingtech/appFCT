@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="436.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tux.appfct.ClientListController">
+    <children>
+        <Label text="Cadastro do Cliente">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <padding>
+                <Insets left="5.0" top="5.0" />
+            </padding>
+        </Label>
+        <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <items>
+                <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" text="Novo" />
+            </items>
+        </ToolBar>
+        <TableView fx:id="tableViewPerson" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="Código" />
+                <TableColumn fx:id="tableColumnName" prefWidth="75.0" text="Nome" />
+                <TableColumn fx:id="tableColumnBirthday" prefWidth="75.0" text="Data de nascimento" />
+                <TableColumn fx:id="tableColumnGender" prefWidth="75.0" text="Gênero" />
+                <TableColumn fx:id="tableColumnAddress" prefWidth="75.0" text="Endereço" />
+                <TableColumn fx:id="tableColumnPerson" prefWidth="75.0" text="P. Física ou Jurídica" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
