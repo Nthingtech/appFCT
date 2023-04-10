@@ -1,4 +1,4 @@
-package tux.controllers;
+package tux.appfct;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

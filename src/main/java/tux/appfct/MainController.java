@@ -1,4 +1,4 @@
-package tux.controllers;
+package tux.appfct;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,7 +37,7 @@ public class MainController implements Initializable {
 
     @FXML
     public void  onMenuItemPersonalAction() {
-        loadView("controllers/PersonalList.fxml");
+        loadView("PersonalList.fxml");
     }
 
     @FXML

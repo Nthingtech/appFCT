@@ -11,10 +11,6 @@ public class Personal extends Person implements Serializable {
 
     private String cref;
 
-    public Personal(Integer id, String cref) {
-        this.id = id;
-        this.cref = cref;
-    }
 
     public Personal(String name, Instant birthday, Character genre, String address, String person, Integer id, String cref) {
         super(name, birthday, genre, address, person);
