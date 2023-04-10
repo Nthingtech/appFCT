@@ -1,4 +1,4 @@
-package tux.appfct;
+package tux.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -7,6 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import tux.appfct.MainApplication;
 import tux.appfct.entities.Personal;
 
 import java.net.URL;

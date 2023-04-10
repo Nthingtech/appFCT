@@ -1,4 +1,4 @@
-package tux.appfct;
+package tux.appfct.controllers;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +22,7 @@ public class MainApplication extends Application {
 
            mainScene  = new Scene(scrollPane);
            primaryStage.setScene(mainScene);
-           primaryStage.setTitle("JavaFX!");
+           primaryStage.setTitle("TreinEasy - ERP");
            primaryStage.show();
        } catch (IOException e) {
            e.printStackTrace();
